@@ -1,0 +1,8 @@
+# copy the ssh-key of host machine to remote server so that you'll not have to enter password next time
+ssh-copy-id ldz@192.168.0.1
+
+# transfer files from host machine to remote server
+# by rsync
+rsync -auv /path/to/local/files XXX@XXX.XXX.XXX.XXX:/path/to/target/directory
+# by scp
+scp -r /path/to/local/files XXX@XXX.XXX.XXX.XXX:/path/to/target/directory
