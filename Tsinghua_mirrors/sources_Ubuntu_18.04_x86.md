@@ -1,4 +1,12 @@
-# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+# To apply Tsinghua Mirrors on "apt-get install"(Ubuntu 18.04 LTS x86)
+## Step 1: rename existing apt config file, create a new one, and open it.
+```
+sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak
+sudo touch /etc/apt/sources.list
+sudo vim /etc/apt/sources.list
+```
+## Step2: paste following lines and save.
+```
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
@@ -8,6 +16,6 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricte
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
 
-# 预发布软件源，不建议启用
 # deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
+```

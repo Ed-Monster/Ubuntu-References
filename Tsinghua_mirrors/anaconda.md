@@ -1,3 +1,12 @@
+# To apply Tsinghua Mirrors on Anaconda
+## Step1: rename existing anaconda config file, create a new one, and open it.
+```
+mv ~/.condarc ~/.condarc_bak
+touch ~/.condarc
+vim ~/.condarc
+```
+## Step2: paste following lines and save.
+```
 channels:
   - defaults
 show_channel_urls: true
@@ -13,3 +22,4 @@ custom_channels:
   pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+```
