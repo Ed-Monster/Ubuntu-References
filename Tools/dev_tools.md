@@ -1,4 +1,3 @@
-[TOC]
 # VS Code
-[TOC]
+- [Download](https://code.visualstudio.com/)
 # Docker
